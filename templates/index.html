@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartIQ - 3D Predictive Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background Setup -->
+    <div class="background-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="main-container" id="tilt-element">
+        <div class="glass-panel">
+            <div class="panel-header">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <h1>HeartIQ Engine</h1>
+                    <p>Advanced Machine Learning Cardiology Predictor</p>
+                </div>
+            </div>
+
+            <form id="prediction-form" class="prediction-form">
+                <div class="form-grid">
+                    <!-- Column 1 -->
+                    <div class="input-group">
+                        <label for="age"><i class="fa-solid fa-calendar-days"></i> Age</label>
+                        <input type="number" id="age" required placeholder="e.g. 45">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sex"><i class="fa-solid fa-venus-mars"></i> Sex</label>
+                        <select id="sex" required>
+                            <option value="" disabled selected>Select Sex</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cp"><i class="fa-solid fa-staff-snake"></i> Chest Pain Type</label>
+                        <select id="cp" required>
+                            <option value="" disabled selected>Select Type</option>
+                            <option value="1">1 - Typical Angina</option>
+                            <option value="2">2 - Atypical Angina</option>
+                            <option value="3">3 - Non-anginal pain</option>
+                            <option value="4">4 - Asymptomatic</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="trestbps"><i class="fa-solid fa-droplet"></i> Resting BP (mm Hg)</label>
+                        <input type="number" id="trestbps" required placeholder="e.g. 120">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="chol"><i class="fa-solid fa-vial"></i> Serum Cholestoral (mg/dl)</label>
+                        <input type="number" id="chol" required placeholder="e.g. 200">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fbs"><i class="fa-solid fa-cubes-stacked"></i> Fasting Blood Sugar > 120</label>
+                        <select id="fbs" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="input-group">
+                        <label for="restecg"><i class="fa-solid fa-wave-square"></i> Resting ECG</label>
+                        <select id="restecg" required>
+                            <option value="" disabled selected>Select Result</option>
+                            <option value="0">0 - Normal</option>
+                            <option value="1">1 - ST-T wave alt</option>
+                            <option value="2">2 - LV hypertrophy</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="thalach"><i class="fa-solid fa-heart-crack"></i> Max Heart Rate</label>
+                        <input type="number" id="thalach" required placeholder="e.g. 150">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="exang"><i class="fa-solid fa-person-running"></i> Exercise Angina</label>
+                        <select id="exang" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="oldpeak"><i class="fa-solid fa-chart-line"></i> ST Depression (Oldpeak)</label>
+                        <input type="number" id="oldpeak" step="0.1" required placeholder="e.g. 1.5">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="slope"><i class="fa-solid fa-arrow-trend-up"></i> Slope of Peak ST</label>
+                        <select id="slope" required>
+                            <option value="" disabled selected>Select Slope</option>
+                            <option value="1">1 - Upsloping</option>
+                            <option value="2">2 - Flat</option>
+                            <option value="3">3 - Downsloping</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ca"><i class="fa-solid fa-microscope"></i> Major Vessels Colored</label>
+                        <select id="ca" required>
+                            <option value="" disabled selected>Select Vessels (0-3)</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group thallium-group">
+                    <label for="thal"><i class="fa-solid fa-virus"></i> Thallium Scan Result</label>
+                    <select id="thal" required>
+                        <option value="" disabled selected>Select Result</option>
+                        <option value="3">3 - Normal</option>
+                        <option value="6">6 - Fixed Defect</option>
+                        <option value="7">7 - Reversible Defect</option>
+                    </select>
+                </div>
+
+                <div class="action-section">
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-text">Run Neural Pathway Analysis</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <div class="loading-spinner" id="loading-spinner">
+                        <div class="spinner-ring"></div>
+                        <span>Processing biometrics...</span>
+                    </div>
+                </div>
+            </form>
+            
+            <div id="result-overlay" class="result-overlay hidden">
+                <div class="result-card">
+                    <button id="close-result" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                    <div id="result-icon" class="result-icon pulse"></div>
+                    <h2 id="result-title">Analysis Complete</h2>
+                    <p id="result-message">AI Confidence Score: 98.4%</p>
+                    <div class="score-bar">
+                        <div id="score-fill" class="score-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
