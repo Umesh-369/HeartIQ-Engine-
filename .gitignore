@@ -1,0 +1,89 @@
+# =======================
+# Python
+# =======================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# =======================
+# Machine Learning
+# =======================
+# Trained model artifacts (uncomment if you don't want to track models)
+# *.pkl
+# *.h5
+# *.pt
+# *.pth
+# *.onnx
+# *.joblib
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# =======================
+# Data Files (large/sensitive)
+# =======================
+# Uncomment below if you don't want raw data tracked
+# *.csv
+# *.xlsx
+# *.json
+# data/
+
+# =======================
+# IDE / Editors
+# =======================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# =======================
+# OS Files
+# =======================
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# =======================
+# Logs & Temp Files
+# =======================
+*.log
+*.tmp
+*.bak
+*.swp
+logs/
