@@ -2,7 +2,6 @@
   <h1>🫀 HeartIQ Engine</h1>
   <p><strong>Advanced Machine Learning Cardiology Predictor with an Ultra-Premium Glassmorphism Interface</strong></p>
 
-  
   [![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
   [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
   [![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
